@@ -1,0 +1,1 @@
+# GerenciadorFolhaPagamento_Frontend
