@@ -1,0 +1,38 @@
+﻿<div class="row rounded shadow-sm pt-3 pb-3 col-12">
+    <div class="col-12">
+        <h1 class="text-primary small font-weight-bold" style="font-size: 20px">Parâmetros do sistema</h1>
+    </div>
+
+    <br />
+
+    <div class="row col-5">
+        <label class="small text-secondary font-weight-bold"></label>
+        @Html.TextBox("txtBuscaParametro", "", new { @class = "form-control form-control-sm ml-3", @placeholder = "NOME OU CÓDIGO PARÂMETRO" })
+
+    </div>
+
+    <div id="listaPlanos" style="display: none">
+    </div>
+
+</div>
+
+<br />
+<br />
+
+<div id="gridCadastraPlano" style="display: none">
+</div>
+
+@section Scripts
+    {
+
+    <script type="text/javascript">
+        if (window.initialState == undefined) {
+            window.initialState = {};
+        }
+
+    </script>
+    <script src="~/Scripts/Custom/Uteis.js"></script>
+    <script src="~/Scripts/Application/Faturamento/LisOcorrencia.js"></script>
+    <script src="~/Scripts/Custom/datatables-1.10.20.js"></script>
+    <script src="~/Scripts/Custom/moment.js"></script>
+}
