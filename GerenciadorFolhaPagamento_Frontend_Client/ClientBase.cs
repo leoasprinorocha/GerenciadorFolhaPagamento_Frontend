@@ -23,7 +23,7 @@ namespace GerenciadorFolhaPagamento_Frontend_Client
 
         public async Task<T> GetAsync<T>(string controller, string action)
         {
-            string absoluteUrl = GetEndPointUrl() + $"{controller}/" + action;
+            string absoluteUrl = GetApiURL() + $"{controller}/" + action;
 
             HttpRequestMessage request = new(HttpMethod.Get, absoluteUrl);
 
@@ -36,7 +36,7 @@ namespace GerenciadorFolhaPagamento_Frontend_Client
 
         public async Task<T> PostAsync<T>(string controller, string action, object obj)
         {
-            string absoluteUrl = GetEndPointUrl() + $"{controller}/" + action;
+            string absoluteUrl = GetApiURL() + $"{controller}/" + action;
 
             HttpResponseMessage response = await _httpClient.PostAsync(absoluteUrl, GetHttpContent(obj));
 
@@ -62,7 +62,7 @@ namespace GerenciadorFolhaPagamento_Frontend_Client
         }
 
 
-        private string GetEndPointUrl() =>
+        private string GetApiURL() =>
             _config.GetSection("RedirectApi").Value;
 
         private T Deserialize<T>(string response) => JsonConvert.DeserializeObject<T>(response);

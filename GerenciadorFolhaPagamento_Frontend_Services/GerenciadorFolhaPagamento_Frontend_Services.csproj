@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GerenciadorFolhaPagamento_Frontend_Client\GerenciadorFolhaPagamento_Frontend_Client.csproj" />
     <ProjectReference Include="..\GerenciadorFolhaPagamento_Frontend_Domain\GerenciadorFolhaPagamento_Frontend_Domain.csproj" />
   </ItemGroup>
 

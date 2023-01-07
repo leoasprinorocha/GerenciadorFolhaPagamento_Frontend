@@ -9,6 +9,6 @@ namespace GerenciadorFolhaPagamento_Frontend_Domain.Interfaces.Services
 {
     public interface IParametrosServices
     {
-        Task CadastrarNovoParametro(NovoParametroViewModel novoParametro);
+        Task<string> CadastrarNovoParametro(List<NovoParametroViewModel> novoParametro);
     }
 }
