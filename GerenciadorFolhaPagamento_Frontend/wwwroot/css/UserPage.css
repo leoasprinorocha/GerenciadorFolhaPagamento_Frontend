@@ -1,0 +1,107 @@
+﻿#retanguloSuperior {
+    position: absolute;
+    width: 1440px;
+    height: 60px;
+    left: 0px;
+    top: -2px;
+    background: rgba(10, 25, 157, 0.69);
+}
+
+#txtSuperior {
+    position: absolute;
+    width: 638px;
+    height: 83px;
+    left: 38px;
+    top: 19px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 41px;
+    color: #000000;
+}
+
+
+.example-parent {
+    
+    color: black;
+    display: flex;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.example-origin {
+    flex-basis: 100%;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.example-draggable {
+    background-color: #808080;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.example-dropzone {
+    background-color: #86bce2;
+    flex-basis: 100%;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+
+.modal {
+    text-align: center;
+    padding: 0 !important;
+}
+
+    .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+
+@media screen and (min-width:992px) {
+    .modal-lg {
+        min-width: 900px;
+    }
+}
+
+.modal-backdrop {
+    display: none;
+}
+
+
+.modalLoading {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8 ) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading .modalLoading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modalLoading {
+    display: block;
+}

@@ -1,0 +1,64 @@
+﻿.holders {
+    cursor: zoom-in;
+}
+
+.icFont {
+    font-size: 95%;
+}
+
+.hiden img {
+    display: none;
+}
+
+.contratos {
+    display: none;
+}
+
+.disabled {
+cursor: not-allowed;
+}
+
+.linkdisabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.pnDetalhes {
+    background-color: white;
+    display: none;
+    position: absolute;
+    z-index: 999;
+}
+
+.is-valid {
+    border-color: #00c925;
+    background-color: #d1ffdb;
+}
+
+.selected td{
+    background-color:yellow;
+}
+
+/*Ajax Loading*/
+.Loading {
+    text-align:center;
+    padding-top:20%;
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8 ) /*url('https://i.stack.imgur.com/FhHRx.gif')*/ 50% 50% no-repeat;
+}
+
+body.loading .Loading {
+    overflow: hidden;
+}
+
+body.loading .Loading {
+    display: block;
+}
+
+/*Fim-Ajax Loading*/

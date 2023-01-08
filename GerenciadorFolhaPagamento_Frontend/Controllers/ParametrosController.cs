@@ -22,12 +22,19 @@ namespace GerenciadorFolhaPagamento_Frontend.Controllers
             return View();
         }
 
+        [HttpGet]
+        public async Task<IActionResult> RecuperaTodosOsParametros() =>
+        Ok(await _parametrosServices.RetornaTodosOsParametros());
+
+
+
         [HttpPost]
         public async Task<IActionResult> GravarParametros([FromForm] List<NovoParametroViewModel> listaparametros)
         {
             try
             {
-                return Ok(await _parametrosServices.CadastrarNovoParametro(listaparametros));
+                var respostaGenerica = await _parametrosServices.CadastrarNovoParametro(listaparametros);
+                return Ok(respostaGenerica.Resposta);
             }
             catch (Exception ex)
             {

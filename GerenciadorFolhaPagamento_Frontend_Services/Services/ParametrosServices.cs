@@ -16,10 +16,13 @@ namespace GerenciadorFolhaPagamento_Frontend_Services.Services
             _clientBase = clientBase;
         }
 
-        public async Task<string> CadastrarNovoParametro(List<NovoParametroViewModel> novoParametro) =>
-        await _clientBase.PostAsync<string>(_controller, "CadastrarParametro", novoParametro);
+        public async Task<RespostaGenericaViewModel> CadastrarNovoParametro(List<NovoParametroViewModel> novoParametro) =>
+        await _clientBase.PostAsync<RespostaGenericaViewModel>(_controller, "CadastrarParametro", novoParametro);
 
-        
-        
+        public async Task<List<NovoParametroViewModel>> RetornaTodosOsParametros() =>
+        await _clientBase.GetAsync<List<NovoParametroViewModel>>(_controller, "RetornaTodosOsParametros");
+
+
+
     }
 }
