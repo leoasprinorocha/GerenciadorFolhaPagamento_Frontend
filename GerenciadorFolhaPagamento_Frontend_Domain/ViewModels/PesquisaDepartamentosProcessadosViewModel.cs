@@ -12,9 +12,6 @@ namespace GerenciadorFolhaPagamento_Frontend_Domain.ViewModels
         public decimal TotalPagar { get; set; }
         public decimal TotalDescontos { get; set; }
         public decimal TotalExtras { get; set; }
-
-        [JsonIgnore]
-        public int IdProcessamentoFolha { get; set; }
         public List<FuncionarioPesquisaProcessamentoViewModel> Funcionarios { get; set; }
     }
 }

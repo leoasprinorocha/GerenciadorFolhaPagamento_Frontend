@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<div class="row rounded shadow-sm pt-3 pb-3 col-12">
+    <div class="col-12">
+        <h1 class="text-primary small font-weight-bold" style="font-size: 20px">Meu maior desafio de programação até hoje</h1>
+        <p>
+            Tive experiência de atuar um projeto de integração com um novo componente de emissão NFSe, em que muitos munícipios
+            trabalham de maneira assíncrona, ou seja, recebem as solicitações de emissões e devolvem um protocolo e posteriormente
+            é necessário ficar fazendo consultas. Essa integração se deu por meio de uma única API publicada para todos os clientes,
+            e por conta das prefeituras assíncronas a API estava com muito gargalo de requisições, pois a aplicação frontend ficava
+            aguardando a API devolver o protocolo da prefeitra e após uma análise percebi que isso não era necessário. No momento
+            desta integração só estava eu no time então tinha que pensar em uma solução para esse entupimento de requisições aguardadas
+            da API, então arquiteturei um fluxo de consumo da API da seguinte maneira: As aplicações clientes somente vão mandar a
+            solicitação de emissão para a API e não irá aguardar o protocolo, a API levanta uma nova thread para emitir esse protocolo
+            e salvar no banco. Em paralelo a isso, há um job no HangFire que de segundos em segundos verifica esses protocolos recebidos
+            e consulta se a NFSe esta pronta, quando essa estiver será salva no banco. Agora o frontend fica com melhor desempenho sem
+            precisar ficar aguardando as requisições da API, resumindo, essa tarefa que durou um mês mais ou menos foi o meu melhor
+            desafio que tive até hoje.
+        </p>
+    </div>
+
+    <div class="col-12">
+        <h1 class="text-primary small font-weight-bold" style="font-size: 20px">Tecnologias e arquitetura desse desafio</h1>
+        <p>A API foi desenvolvida no framework .NET 5, no formato ASP NET WEB API, que trabalha com RESTFul:</p>
+        <img src="~/images/arquitetura.png" style="width: 1000px; height: 500px;"/>
+
+    </div>
+</div>

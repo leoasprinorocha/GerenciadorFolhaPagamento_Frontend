@@ -109,8 +109,7 @@ async function RequestAjax(url, data, metodo) {
         result = data;
         $('#Fade_area').removeAttr("style");
         $('#myModal').removeAttr("style");
-    },
-    );
+    });
 
     return result;
 }

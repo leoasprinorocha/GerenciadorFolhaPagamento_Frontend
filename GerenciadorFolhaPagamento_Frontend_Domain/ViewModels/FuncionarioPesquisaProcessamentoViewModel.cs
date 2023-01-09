@@ -18,7 +18,6 @@ namespace GerenciadorFolhaPagamento_Frontend_Domain.ViewModels
         public int DiasExtras { get; set; }
         public int DiasTrabalhados { get; set; }
 
-        [JsonIgnore]
-        public int IdProcessamentoFolha { get; set; }
+        
     }
 }

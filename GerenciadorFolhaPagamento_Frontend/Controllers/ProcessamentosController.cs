@@ -1,6 +1,8 @@
 ﻿using GerenciadorFolhaPagamento_Frontend_Domain.Interfaces.Services;
+using GerenciadorFolhaPagamento_Frontend_Domain.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace GerenciadorFolhaPagamento_Frontend.Controllers
@@ -42,10 +44,10 @@ namespace GerenciadorFolhaPagamento_Frontend.Controllers
                 var conteudoJson = await _processamentosServices.RetornaDepartamentosProcessados();
                 return Ok(JsonConvert.SerializeObject(conteudoJson, Formatting.Indented).ToString());
             }
-            catch (System.Exception ex)
+            catch (JsonReaderException)
             {
-
-                throw;
+                List<PesquisaDepartamentosProcessadosViewModel> listaNula = new List<PesquisaDepartamentosProcessadosViewModel>();
+                return Ok(JsonConvert.SerializeObject(listaNula));
             }
         }
 
