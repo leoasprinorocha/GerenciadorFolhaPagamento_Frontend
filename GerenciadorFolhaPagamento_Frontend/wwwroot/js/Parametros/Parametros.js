@@ -1,8 +1,8 @@
 ﻿$body = $("body");
 
 $(document).on({
-    ajaxStart: function () { $body.addClass("Loading"); },
-    ajaxStop: function () { $body.removeClass("Loading"); }
+    ajaxStart: function () { $body.addClass("loading"); },
+    ajaxStop: function () { $body.removeClass("loading"); }
 });
 
 $(document).ready(async function () {
@@ -10,7 +10,7 @@ debugger
     let url = "../Parametros/RecuperaTodosOsParametros";
     var listaParametros = await RequestAjax(url, null, "GET");
     $(listaParametros).each(function (index, parametro) {
-        var element = $('.parametros').find(`[data-idParametro='${parametro.idParametro}']`);
+        var element = $('.parametros').find(`[data-idparametro='${parametro.idParametro}']`);
         $(element.prevObject[0]).val(parametro.valorParametro);
     });
 });

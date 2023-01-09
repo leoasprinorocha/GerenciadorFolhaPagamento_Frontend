@@ -34,7 +34,7 @@ var displayMessage = function (message, msgType) {
 
     toaster();
 
-    };
+};
 
 
 function validateDate(id) {
@@ -95,16 +95,21 @@ async function RequestAjax(url, data, metodo) {
     metodo = metodo == undefined || metodo == "" ? "GET" : metodo;
 
     let result;
-    
+
 
     await $.ajax({
         url: url,
         data: data,
         method: metodo,
+        beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+            $('#modaloading').modal("show");
+        },
         async: true
     }).done(async function (data) {
         result = data;
-    });
+        $('#modaloading').modal("hide");
+    },
+    );
 
     return result;
 }

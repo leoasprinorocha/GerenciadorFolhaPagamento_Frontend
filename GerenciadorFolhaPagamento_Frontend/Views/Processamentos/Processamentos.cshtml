@@ -1,0 +1,32 @@
+﻿<div class="row rounded shadow-sm pt-3 pb-3 col-12">
+    <div class="col-12">
+        <h1 class="text-primary small font-weight-bold" style="font-size: 20px">Processamentos das folhas de pagamentos</h1>
+    </div>
+
+    <div class="row rounded shadow-sm pt-3 pb-3 col-8 ml-2" id="gridArquivosASeremProcessados">
+        
+    </div>
+    <div class="row mt-5 ml-4">
+        <button class="btn btn-success btn-block ml-3" id="btnProcessarArquivos">PROCESSAR ARQUIVOS</button>
+    </div>
+
+    <div class="row rounded shadow-sm pt-3 pb-3 col-8 ml-2 mt-2" id="gridConteudoJsonProcessados">
+        <div class="col-12">
+            <h3 class="text-primary small font-weight-bold">Processados</h3>
+        </div>
+        <textarea id="conteudoJson" name="w3review" cols="80" class="ml-3" rows="20" disabled>
+            </textarea>
+    </div>
+
+    <br />
+    
+
+</div>
+
+
+@section Scripts
+    {
+    <script src="~/js/Scripts/Uteis.js"></script>
+    <script src="~/js/Processamentos/Processamentos.js"></script>
+
+}

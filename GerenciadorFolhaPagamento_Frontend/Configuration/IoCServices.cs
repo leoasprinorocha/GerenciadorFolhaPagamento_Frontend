@@ -20,6 +20,7 @@ namespace GerenciadorFolhaPagamento_Frontend.Configuration
         private static IServiceCollection AddDomainServices(this IServiceCollection services)
         {
             services.AddScoped<IParametrosServices, ParametrosServices>();
+            services.AddScoped<IProcessamentosServices, ProcessamentosServices>();
             return services;
         }
 

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<string>
+
+
+
+
+
+<table class="table table-sm table-striped" id="tablePlano">
+    @if (Model != null && Model.Count() > 0)
+    {
+        <thead>
+            <tr class="small font-weight-bold text-muted">
+                <td id="txtLocal">Nome arquivo</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="small">
+                    <td>@item</td>
+                </tr>
+
+            }
+        </tbody>
+    }
+    else
+    {
+        <tr>
+            Não há arquivos
+        </tr>
+    }
+</table>

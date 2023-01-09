@@ -1,64 +1,27 @@
-﻿.holders {
-    cursor: zoom-in;
+﻿.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
 }
 
-.icFont {
-    font-size: 95%;
-}
+    .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+    }
 
-.hiden img {
-    display: none;
-}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
 
-.contratos {
-    display: none;
+    100% {
+        transform: rotate(360deg);
+    }
 }
-
-.disabled {
-cursor: not-allowed;
-}
-
-.linkdisabled {
-    pointer-events: none;
-    cursor: not-allowed;
-}
-
-.pnDetalhes {
-    background-color: white;
-    display: none;
-    position: absolute;
-    z-index: 999;
-}
-
-.is-valid {
-    border-color: #00c925;
-    background-color: #d1ffdb;
-}
-
-.selected td{
-    background-color:yellow;
-}
-
-/*Ajax Loading*/
-.Loading {
-    text-align:center;
-    padding-top:20%;
-    display: none;
-    position: fixed;
-    z-index: 10000;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba( 255, 255, 255, .8 ) /*url('https://i.stack.imgur.com/FhHRx.gif')*/ 50% 50% no-repeat;
-}
-
-body.loading .Loading {
-    overflow: hidden;
-}
-
-body.loading .Loading {
-    display: block;
-}
-
-/*Fim-Ajax Loading*/

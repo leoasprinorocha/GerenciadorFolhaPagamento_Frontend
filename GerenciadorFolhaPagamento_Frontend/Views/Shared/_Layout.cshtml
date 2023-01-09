@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" type="text/css" href="~/css/Custom.css" />
-    <link rel="stylesheet" type="text/css" href="~/css/UserPage.css" />
 </head>
 <body>
     <header>
@@ -29,6 +28,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Parametros" asp-action="Parametros">Parametros</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Processamentos" asp-action="Processamentos">Processamentos</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -38,7 +40,19 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+        <div class="modal" id="modaloading" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body align-content-center">
+                        <p>Aguarde...</p>
+                        <img src="~/images/loading.gif" style="margin-left: 130px"/>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
 
     <footer class="border-top footer text-muted">
         <div class="container">
