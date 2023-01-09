@@ -102,12 +102,13 @@ async function RequestAjax(url, data, metodo) {
         data: data,
         method: metodo,
         beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-            $('#modaloading').modal("show");
+            $('.overlay,.popup').fadeIn();
         },
         async: true
     }).done(async function (data) {
         result = data;
-        $('#modaloading').modal("hide");
+        $('#Fade_area').removeAttr("style");
+        $('#myModal').removeAttr("style");
     },
     );
 

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" type="text/css" href="~/css/Custom.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/ProgressBarWindows.css" />
 </head>
 <body>
     <header>
@@ -38,6 +39,10 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <div class="overlay" id="Fade_area"></div>
+            <div class="popup" id="myModal">
+                @Html.Partial("~/Views/shared/_Popup.cshtml")
+            </div>
             @RenderBody()
         </main>
         <div class="modal" id="modaloading" tabindex="-1" role="dialog">
@@ -51,6 +56,8 @@
             </div>
         </div>
     </div>
+
+    
 
 
 
