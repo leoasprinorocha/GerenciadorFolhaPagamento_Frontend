@@ -17,6 +17,11 @@ namespace GerenciadorFolhaPagamento_Frontend_Services.Services
         {
             _clientBase = clientBase;
         }
+
+        public async Task<RespostaGenericaViewModel> LimparDadosProcessados() =>
+        await _clientBase.PostAsync<RespostaGenericaViewModel>(_controller,"LimparDadosProcessados", null);
+
+
         public RespostaGenericaViewModel ProcessarArquivos() =>
         _clientBase.PostAsync<RespostaGenericaViewModel>(_controller, "ExecutaProcessamento", null).Result;
 

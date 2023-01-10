@@ -12,5 +12,6 @@ namespace GerenciadorFolhaPagamento_Frontend_Domain.Interfaces.Services
         Task<List<string>> RetornaArquivosQueEstaoNaPastaDeProcessamento();
         RespostaGenericaViewModel ProcessarArquivos();
         Task<List<PesquisaDepartamentosProcessadosViewModel>> RetornaDepartamentosProcessados();
+        Task<RespostaGenericaViewModel> LimparDadosProcessados();
     }
 }

@@ -26,3 +26,15 @@ $('#btnProcessarArquivos').on("click", async function () {
     let response = await RequestAjax(url, data, "POST");
     alert(response);
 });
+
+
+$('#btnLimparDadosProcessados').on("click", async function () {
+    let data = null;
+    let url = "../Processamentos/LimparDadosProcessados";
+    let response = await RequestAjax(url, data, "POST");
+    alert(response);
+});
+
+$('#btnAtualizar').on("click", function () {
+    window.location.reload();
+});
